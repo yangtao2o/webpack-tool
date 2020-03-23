@@ -4,8 +4,9 @@
   "description": "记录 Webpack 的一个小仓库",
   "main": "main.js",
   "scripts": {
-    "build": "webpack --mode production",
-    "start": "webpack-dev-server --mode development"
+    "dev": "webpack-dev-server --config webpack.dev.js --mode development --open",
+    "build": "webpack --config webpack.prod.js --mode production",
+    "watch": "webpack --config webpack.dev.js --watch"
   },
   "repository": {
     "type": "git",
