@@ -1,0 +1,24 @@
+{
+  "name": "webpack-tool",
+  "version": "1.1.0",
+  "description": "记录 Webpack 的一个小仓库",
+  "main": "main.js",
+  "scripts": {
+    "dev": "webpack-dev-server --config webpack.dev.js --mode development --open",
+    "build": "webpack --config webpack.prod.js --mode production",
+    "watch": "webpack --config webpack.dev.js --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yangtao2o/tool-webpack.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yangtao2o/tool-webpack/issues"
+  },
+  "homepage": "https://github.com/yangtao2o/tool-webpack#readme",
+  "devDependencies": {
+  }
+}
