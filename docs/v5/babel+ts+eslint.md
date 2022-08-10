@@ -1,4 +1,4 @@
-# 如何借助 Babel+TS+ESLint 构建现代 JS 工程环境
+# Babel+TS+ESLint 构建 JS 工程环境
 
 ## Babel
 
