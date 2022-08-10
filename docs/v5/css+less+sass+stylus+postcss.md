@@ -16,6 +16,8 @@
 ## 下载
 
 ```sh
+yarn add -D html-webpack-plugin
+
 yarn add -D css-loader style-loader mini-css-extract-plugin
 
 yarn add -D less less-loader
@@ -31,11 +33,8 @@ yarn add -D postcss postcss-loader
 
 ```js
 const path = require('path')
-const ESLintPlugin = require('eslint-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const HTMLWebpackPlugin = require('html-webpack-plugin')
-
-console.log('env', process.env.NODE_ENV)
 
 const getStyleLoader = () => {
   return process.env.NODE_ENV === 'development'
