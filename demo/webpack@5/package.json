@@ -4,11 +4,7 @@
   "description": "webpack v5 demo",
   "private": true,
   "scripts": {
-    "start": "webpack  --config webpack.config.js",
-    "vn:release": "npm version release --allow-same-version=false --git-tag-version=true",
-    "vn:patch": "npm version patch --allow-same-version=false --git-tag-version=true",
-    "vn:minor": "npm version minor --allow-same-version=false --git-tag-version=true",
-    "vn:major": "npm version major --allow-same-version=false --git-tag-version=true"
+    "start": "webpack  --config webpack.config.js"
   },
   "repository": {
     "type": "git",
