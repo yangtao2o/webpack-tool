@@ -1,0 +1,36 @@
+// 变量
+$size: 12px;
+$color: #006633;
+
+// 混合
+@mixin flex(
+  $direction: row,
+  $justify: center,
+  $align: center,
+  $flex-wrap: wrap
+) {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  flex-wrap: $flex-wrap;
+}
+
+// 嵌套
+
+body {
+  // 函数计算
+  font-weight: bold;
+  padding: $size;
+
+  .main-page {
+    @include flex();
+    font-size: $size * 2;
+    padding: $size * 0.6;
+  }
+}
+
+::placeholder {
+  color: gray;
+}

@@ -1,3 +1,12 @@
 h1 {
   color: #ff3300;
 }
+
+.main-page {
+  font-size: 24px;
+  color: #f90;
+}
+
+::placeholder {
+  color: gray;
+}
