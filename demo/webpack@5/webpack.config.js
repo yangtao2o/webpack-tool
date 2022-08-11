@@ -63,8 +63,20 @@ module.exports = {
         use: [getStyleLoader(), 'css-loader', 'stylus-loader'],
       },
       {
-        test: /\.(png|jpg|gif)$/,
+        test: /\.(png|jpe?g|gif)$/,
         type: 'asset/resource',
+        // use: [
+        //   {
+        //     loader: 'image-webpack-loader',
+        //     options: {
+        //       disable: process.env.NODE_ENV === 'development',
+        //       // jpeg 压缩配置
+        //       mozjpeg: {
+        //         quality: 80,
+        //       },
+        //     },
+        //   },
+        // ],
       },
       // {
       //   test: /\.(png|jpg|gif)$/,
