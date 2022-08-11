@@ -18,6 +18,7 @@ module.exports = {
   output: {
     filename: '[name].js',
     path: path.join(__dirname, './dist'),
+    assetModuleFilename: 'images/[hash][ext][query]',
   },
   module: {
     rules: [
@@ -60,6 +61,23 @@ module.exports = {
       {
         test: /\.styl$/,
         use: [getStyleLoader(), 'css-loader', 'stylus-loader'],
+      },
+      {
+        test: /\.(png|jpg|gif)$/,
+        type: 'asset/resource',
+      },
+      // {
+      //   test: /\.(png|jpg|gif)$/,
+      //   type: 'asset/inline',
+      //   parser: {
+      //     dataUrlCondition: {
+      //       maxSize: 1024,
+      //     },
+      //   },
+      // },
+      {
+        test: /\.svg$/i,
+        type: 'asset/inline',
       },
     ],
   },

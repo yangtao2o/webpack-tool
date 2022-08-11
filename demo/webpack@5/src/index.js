@@ -1,17 +1,30 @@
 import _ from 'lodash'
-import { say } from './say.ts'
 
-import './index.css'
-import './main.less'
-import './main.scss'
-import './main.styl'
+import SaySomething from './components/SaySomething.ts'
+
+import './assets/css/index.css'
+import './assets/css/main.less'
+import './assets/css/main.scss'
+import './assets/css/main.styl'
+
+import coverImg from './assets/img/cover.jpg'
+import minImg from './assets/img/icon_new.png'
+import svgImg from './assets/img/icon_ding.svg'
 
 function component() {
   const element = document.createElement('div')
   element.className = 'main-page'
 
-  // Lodash（目前通过一个 script 脚本引入）对于执行这一行是必需的
   element.innerHTML = _.join(['Hello', 'webpack'], ' ')
+
+  return element
+}
+
+function createImg(src) {
+  const element = document.createElement('img')
+  element.src = src || coverImg
+  element.style.width = '100px'
+  element.style.height = 'auto'
 
   return element
 }
@@ -19,5 +32,9 @@ function component() {
 window.onload = () => {
   document.body.appendChild(component())
 
-  say('Hello Nihao!!!')
+  document.body.appendChild(createImg(coverImg))
+  document.body.appendChild(createImg(minImg))
+  document.body.appendChild(createImg(svgImg))
+
+  SaySomething('Hello Nihao!!!')
 }
